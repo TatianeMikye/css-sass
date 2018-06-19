@@ -10,14 +10,18 @@ $color-text-dark: #333;
 $color-text-light: #eee;
 $width-button: 150px;
 
-nav {
-  margin: 30px;
-  background-color: $color-primary;
+@mixin clearfix {
   &::after {
   content: "";
   clear: both;
   display: table;
   } //corrigindo parte do backgroud que sumiu, colapso
+}
+
+nav {
+  margin: 30px;
+  background-color: $color-primary;
+  @include clearfix;
 }
 
 .navigation {
