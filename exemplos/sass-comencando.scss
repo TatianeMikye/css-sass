@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$color-primary: #f9ed69; //yellow color - variable
+$color-secondary: #f08a5d; //orange
+$color-tertiary: #b83b5c; //pink
+$color-text-dark: #333;
+$color-text-light: #eee;
+$width-button: 150px;
+
+@mixin clearfix {
+  &::after {
+  content: "";
+  clear: both;
+  display: table;
+  } //corrigindo parte do backgroud que sumiu, colapso
+}
+
+@mixin style-link-text($color) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+} //codigo é copiado onde é usado o mixin
+
+@function divide($a, $b) {
+  @return $a / $b;
+}
+
+nav {
+  margin: divide(6, 2) * 1px;
+  background-color: $color-primary;
+  @include clearfix
+}
+
+.navigation {
+  list-style: none;
+  float: left;
+  
+  li {
+    display: inline-block;
+    margin-left: 30px;
+  
+    &:first-child {
+      margin: 0;
+    }//primeiro elemento li .navigation li:first-child
+    
+    a:link {
+      @include style-link-text($color-text-dark);
+    }//.navigation li a
+  } 
+}
+
+.buttons {
+  float: right;
+}
+
+%btn-placeholder {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  width: $width-button;
+  @include style-link-text($color-text-light);
+} //com extensão o código não é copiado onde é usado
+
+.btn-main {
+  &:link {
+    @extend %btn-placeholder;
+    background-color: $color-secondary;
+  }
+  
+  &:hover {
+    background-color: darken($color-secondary, 15%);
+  }
+}
+.btn-hot {
+  &:link {
+    @extend %btn-placeholder;
+    background-color: $color-tertiary;
+  }
+  
+  &:hover {
+    background-color: lighten($color-tertiary, 10%);
+  }
+}
