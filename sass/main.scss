@@ -61,7 +61,6 @@ body {
 .heading-primary {
     color: #fff;
     text-transform: uppercase;
-    
     backface-visibility: hidden; /*corrige o pulinho que acontece quando a animação termina */
     margin-bottom: 60px;
 }
@@ -103,7 +102,7 @@ body {
     
     /*60% {
         transform: rotate(180deg); 
-    }*/girando
+    } girando*/
     
     80% {
         transform: translateX(10px);
