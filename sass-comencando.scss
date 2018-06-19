@@ -22,7 +22,7 @@ $width-button: 150px;
   text-decoration: none;
   text-transform: uppercase;
   color: $color;
-}
+} //codigo é copiado onde é usado o mixin
 
 @function divide($a, $b) {
   @return $a / $b;
@@ -63,7 +63,7 @@ nav {
   border-radius: 100px;
   width: $width-button;
   @include style-link-text($color-text-light);
-}
+} //com extensão o código não é copiado onde é usado
 
 .btn-main {
   &:link {
