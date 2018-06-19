@@ -3,6 +3,9 @@ $color-secundary-light: #88304e; //medium purple
 $color-secundary: #522546; //purple
 $color-secundary-dark: #311d3f; //dark-purple
 
+$color-grey-dark: #777;
+$color-white: #fff;
+
 *,
 *::after,
 *.before {
@@ -16,7 +19,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7; /* Significa que a altura da linha é 1.7 x normal*/
-  color: #777;
+  color: $color-grey-dark;
   padding: 30px;
 }
 
@@ -60,7 +63,7 @@ body {
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     
     backface-visibility: hidden; /*corrige o pulinho que acontece quando a animação termina */
@@ -171,8 +174,8 @@ body {
 }
 
 .btn-white {
-    background-color: #fff;
-    color: #777;
+    background-color: $color-white;
+    color: $color-grey-dark;
 }
 
 .btn::after {
@@ -189,7 +192,7 @@ body {
 }
 
 .btn-white::after {
-    background-color: #fff;
+    background-color: $color-white;
 
 }
 
@@ -202,4 +205,3 @@ body {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
-
