@@ -5,6 +5,7 @@ $color-secundary-dark: #311d3f; //dark-purple
 
 $color-grey-dark: #777;
 $color-white: #fff;
+$color-black: #000;
 
 *,
 *::after,
@@ -37,29 +38,29 @@ body {
     background-position: center; /*Imagem responsive*/
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);/*Cada ponto será uma ponta do formato da imagem*/
     position: relative; /* para ser referencia para o top e left do logo-box*/
-}
 
-/* LOGO */
-.logo-box {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
 
-.logo {
-    height: 60px;
-}
+    &__logo {
+        height: 3.5rem;
 
-.logo:hover {
-    animation-name: moveInRight 1s ease-out;
-}/*quando passar pela logo*/
+        &:hover {
+            animation-name: moveInRight 1s ease-out;
+            /*quando passar pela logo*/
+        }
+    }
 
-.text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*Para considerar 50% da imagem*/
-    text-align: center;
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%); /*Para considerar 50% da imagem*/
+        text-align: center;
+    }
 }
 
 .heading-primary {
@@ -70,7 +71,7 @@ body {
     margin-bottom: 60px;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 68px;
     font-weight:  400;
@@ -88,7 +89,7 @@ body {
     */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 20px;
     font-weight: 700;
@@ -164,16 +165,16 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);/*sombra para direção X, sombra para baixo,  tamanho fo borrado, cor*/
+    box-shadow: 0 10px 20px rgba($color-black, .2);/*sombra para direção X, sombra para baixo,  tamanho fo borrado, cor*/
 }
 
 /*botão clicando*/
 .btn:active {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba($color-black, .2);
     transform: translateY(-1px);
 }
 
-.btn-white {
+.btn--white {
     background-color: $color-white;
     color: $color-grey-dark;
 }
@@ -201,7 +202,7 @@ body {
 	opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
