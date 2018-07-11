@@ -69,34 +69,34 @@ body {
     
     backface-visibility: hidden; /*corrige o pulinho que acontece quando a animação termina */
     margin-bottom: 60px;
-}
 
-.heading-primary--main {
-    display: block;
-    font-size: 68px;
-    font-weight:  400;
-    letter-spacing: 35px;
-    text-align: center;
+    &--main {
+        display: block;
+        font-size: 68px;
+        font-weight:  400;
+        letter-spacing: 35px;
+        text-align: center;
+        
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+        /*
+            animation-timing-function: define como a animação vai processeguir, exemplo, quão rápido ou devagar
+            animation-delay: 3s;
+            animation-iteration-count: 3;  repetir animação(3 vezes)
+        */
+    }
     
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    
-    /*
-        animation-timing-function: define como a animação vai processeguir, exemplo, quão rápido ou devagar
-        animation-delay: 3s;
-        animation-iteration-count: 3;  repetir animação(3 vezes)
-    */
-}
-
-.heading-primary--sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 14px;
-    text-align: center;
-    
-    animation-name: moveInRight 1s ease-out; /*simplificando o que foi feito acima*/
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 14px;
+        text-align: center;
+        
+        animation-name: moveInRight 1s ease-out; /*simplificando o que foi feito acima*/
+    }
 }
 
 @keyframes  moveInLeft {
@@ -152,57 +152,60 @@ body {
 
 /*:link, quando for selecionado*/
 /*:visited - estado quando o usuario já clicou no botão*/
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 40px; /*top bottom right left*/
-    display: inline-block;
-    border-radius: 100px;
-    transition: all .2s; /*todas as propriedades estão habilitadas para receber animacao*/
-    position: relative;
-}
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px; /*top bottom right left*/
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s; /*todas as propriedades estão habilitadas para receber animacao*/
+        position: relative;
+    }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-black, .2);/*sombra para direção X, sombra para baixo,  tamanho fo borrado, cor*/
-}
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black, .2);/*sombra para direção X, sombra para baixo,  tamanho fo borrado, cor*/
+    
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+	        opacity: 0;
+        }
+    }
 
-/*botão clicando*/
-.btn:active {
-    box-shadow: 0 5px 10px rgba($color-black, .2);
-    transform: translateY(-1px);
-}
+    /*botão clicando*/
+    &:active {
+        box-shadow: 0 5px 10px rgba($color-black, .2);
+        transform: translateY(-1px);
+    }
 
-.btn--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-}
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        
+        &::after {
+            background-color: $color-white;
+    
+        }
+    }
 
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /*Define a posição dos elementos*/
-    transition: all .4s;
-}
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /*Define a posição dos elementos*/
+        transition: all .4s;
+    }
 
-.btn-white::after {
-    background-color: $color-white;
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
 
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-	opacity: 0;
-}
-
-.btn--animated {
-    animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards;
 }
