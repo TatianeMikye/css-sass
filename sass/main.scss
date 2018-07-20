@@ -11,44 +11,7 @@
 
 @import "components/button";
 
-/* CABEÇALHO */
-.header {
-    height: 95vh; /*Significa que a altura deve ser 95% que a janela de visualização*/
-    background-image: 
-        linear-gradient( /* linear gradient criar um degrade de cor, sendo o 1º paramentro para onde a cor ira mudar, o 2º e 3º sendo as cores*/
-            to right bottom,
-            rgba($color-primary, 0.8), 
-            rgba($color-secundary, 0.8) /*Não esquecer de diminuir a opacidade da cor para aparecer a imagem de baixo*/
-        ),
-        url("../img/hero.jpg"); 
-    background-size: cover;
-    background-position: center; /*Imagem responsive*/
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);/*Cada ponto será uma ponta do formato da imagem*/
-    position: relative; /* para ser referencia para o top e left do logo-box*/
-
-    &__logo-box {
-        position: absolute;
-        top: 4rem;
-        left: 4rem;
-    }
-
-    &__logo {
-        height: 3.5rem;
-
-        &:hover {
-            animation-name: moveInRight 1s ease-out;
-            /*quando passar pela logo*/
-        }
-    }
-
-    &__text-box {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%); /*Para considerar 50% da imagem*/
-        text-align: center;
-    }
-}
+@import "layout/header";
 
 .heading-primary {
     color: $color-white;
