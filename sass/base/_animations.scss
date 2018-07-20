@@ -1,1 +1,50 @@
+@keyframes  moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) /* positivo = direita, negativo = esquerda*/
+        
+    } /*comecando a animação*/
+    
+    /*60% {
+        transform: rotate(180deg); 
+    }girando*/
+    
+    80% {
+        transform: translateX(10px);
+    }/*quando queremos que algo aconteça no meio da animação*/
 
+    100% {
+        opacity: 1;
+        transform: translate(0); /*zero, pq para parecer exatemente como é sem animação*/;
+    } /*terminando a animação*/
+}
+
+@keyframes  moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px); /* positivo = direita, negativo = esquerda*/
+        
+    }
+    
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    } 
+}
+
+@keyframes  moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* positivo = direita, negativo = esquerda*/
+        
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    } 
+}
