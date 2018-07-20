@@ -1,0 +1,59 @@
+/*:link, quando for selecionado*/
+/*:visited - estado quando o usuario já clicou no botão*/
+.btn {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 40px; /*top bottom right left*/
+        display: inline-block;
+        border-radius: 100px;
+        transition: all .2s; /*todas as propriedades estão habilitadas para receber animacao*/
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black, .2);/*sombra para direção X, sombra para baixo,  tamanho fo borrado, cor*/
+    
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+	        opacity: 0;
+        }
+    }
+
+    /*botão clicando*/
+    &:active {
+        box-shadow: 0 5px 10px rgba($color-black, .2);
+        transform: translateY(-1px);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        
+        &::after {
+            background-color: $color-white;
+    
+        }
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /*Define a posição dos elementos*/
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+}
