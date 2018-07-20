@@ -1,1 +1,35 @@
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    
+    backface-visibility: hidden; /*corrige o pulinho que acontece quando a animação termina */
+    margin-bottom: 60px;
 
+    &--main {
+        display: block;
+        font-size: 68px;
+        font-weight:  400;
+        letter-spacing: 35px;
+        text-align: center;
+        
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+        /*
+            animation-timing-function: define como a animação vai processeguir, exemplo, quão rápido ou devagar
+            animation-delay: 3s;
+            animation-iteration-count: 3;  repetir animação(3 vezes)
+        */
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 14px;
+        text-align: center;
+        
+        animation-name: moveInRight 1s ease-out; /*simplificando o que foi feito acima*/
+    }
+}
