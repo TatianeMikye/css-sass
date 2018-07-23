@@ -11,6 +11,7 @@
         url("../img/hero.jpg"); 
     background-size: cover;
     background-position: center; /*Imagem responsive*/
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);/*Cada ponto será uma ponta do formato da imagem*/
     position: relative; /* para ser referencia para o top e left do logo-box*/
 
