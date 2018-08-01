@@ -1,6 +1,8 @@
 /*:link, quando for selecionado*/
 /*:visited - estado quando o usuario já clicou no botão*/
 .btn {
+
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -10,6 +12,10 @@
         border-radius: 100px;
         transition: all .2s; /*todas as propriedades estão habilitadas para receber animacao*/
         position: relative;
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -23,7 +29,9 @@
     }
 
     /*botão clicando*/
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         box-shadow: 0 5px 10px rgba($color-black, .2);
         transform: translateY(-1px);
     }
