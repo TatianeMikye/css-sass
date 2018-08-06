@@ -1,14 +1,13 @@
-//colors
-$color-primary: #e23e57; //pink
-$color-secundary-light: #88304e; //medium purple
-$color-secundary: #522546; //purple
-$color-secundary-dark: #311d3f; //dark-purple
+// COLORS
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
-$color-card-light: #34A6C6;
-$color-card-dark: #38207B;
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
 
-$color-card-light-2: #4B835E;
-$color-card-dark-2: #24516B;
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
@@ -20,10 +19,12 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
-//font
+
+// FONT
 $default-font-size: 1.6rem;
 
-//grid
+
+// GRID
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
