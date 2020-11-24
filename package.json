@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.4"
+    "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
     "live-server": "^1.2.0",
     "node-sass": "^4.9.2",
